@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular Dice Practice</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: #1e293b; color: white; 
+            display: flex; flex-direction: column; align-items: center; 
+            min-height: 100vh; margin: 0; padding: 20px;
+        }
+        #game-board {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;
+        }
+        #spawn-btn {
+            background: #10b981; border: none; padding: 15px 30px; 
+            color: white; font-weight: bold; border-radius: 50px; 
+            cursor: pointer; font-size: 1.2rem; transition: 0.2s;
+        }
+        #spawn-btn:hover { background: #059669; transform: scale(1.05); }
+        .instructions { color: #94a3b8; max-width: 500px; text-align: center; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <h1>Project Modular</h1>
+    <p class="instructions">
+        This page starts empty. When you click the button, we <b>import</b> a separate 
+        JavaScript module containing a full 3D physics engine and inject it into the page.
+    </p>
+
+    <button id="spawn-btn">Initialize Dice Widget</button>
+
+    <div id="game-board">
+        <!-- The Widget will be injected here -->
+    </div>
+
+    <!-- The 'type=module' is critical for imports to work -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
